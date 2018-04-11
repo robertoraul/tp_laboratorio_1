@@ -10,6 +10,8 @@ int main()
     float numeroB;
     float suma;
     float resta;
+    float divide;
+    float multiplica;
     long fac;
 
 
@@ -44,9 +46,11 @@ int main()
                     resta = restaDosNumeros(numeroA, numeroB);
                     printf("\nLa resta entre los dos numeros es : %.2f", resta);
                 break;
-            case 5:
+            case 5: divide = dividirDosNumeros(numeroA, numeroB);
+                    printf("\n el resultado de dividir (A = %f / B =%f) es :", numeroA, numeroB, divide);
                 break;
-            case 6:
+            case 6: multiplica = multiplicaDosNumeros(numeroA, numeroB);
+                    printf("\nEl resultado de multiplicar A = %f, con B = %f es : ", numeroA, numeroB, multiplica);
                 break;
             case 7: fac = factorial(numeroA);
                     printf("El factorial del numero es : %l", fac);
