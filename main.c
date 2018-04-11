@@ -51,7 +51,8 @@ int main()
             case 5: divide = dividirDosNumeros(numeroA, numeroB);
                     if(divide == -0){
                         printf("\nNo se puede realizar la Divicion ( B ) no puede ser 0 !!");
-                    }else{
+                    }
+                    else{
                         printf("\El resultado de la divicion entre ( A = %.2f / B = %.2f ) es igual a : %.2f",
                                 numeroA, numeroB, divide);
                     }
@@ -65,12 +66,23 @@ int main()
             case 7: fac = factorial((int) numeroA);
                     if(fac == -1){
                         printf("\nNo se puede calcular el Factorial de un numero menor a 0");
-                    }else{
+                    }
+                    else{
                         printf("\nEl factorial del numero %d es : %d", (int)numeroA, fac);
                     }
-
                 break;
-            case 8:
+
+            case 8: suma = sumaDosNumeros(numeroA, numeroB);
+                    resta = restaDosNumeros(numeroA, numeroB);
+                    divide = dividirDosNumeros(numeroA, numeroB);
+                    multiplica = multiplicaDosNumeros(numeroA, numeroB);
+                    fac = factorial(numeroA);
+                    system("cls");
+                    printf("\nLa suma de %.2f + %.2f = %.2f ", numeroA,numeroB, suma);
+                    printf("\nLa resta de %.2f - %.2f = %.2f ",numeroA, numeroB, resta);
+                    printf("\nLa divicion de %.2f / %.2f = %.2f ",numeroA, numeroB, divide);
+                    printf("\nLa multiplicacion de %.2f * %.2f = %.2f", numeroA, numeroB, multiplica);
+                    printf("\nEl factorial de %.2f es: %d", numeroA, fac);
                 break;
             case 9:
                 seguir = 'n';
