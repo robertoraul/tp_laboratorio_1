@@ -6,5 +6,5 @@ float sumaDosNumeros(float, float);
 float restaDosNumeros(float, float);
 float multiplicaDosNumeros(float, float);
 float dividirDosNumeros(float, float);
-long factorial(float);
+int factorial(int);
 #endif // FUNCIONES_H_INCLUDED

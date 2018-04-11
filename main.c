@@ -12,7 +12,7 @@ int main()
     float resta;
     float divide;
     float multiplica;
-    long fac;
+    int fac;
 
 
     while(seguir=='s')
@@ -34,26 +34,40 @@ int main()
             case 1: printf("Ingrese primer numero : ");
                     scanf("%f", &numeroA);
                 break;
+
             case 2: printf("Ingrese segundo numero : ");
                     scanf("%f", &numeroB);
                 break;
+
             case 3:
                     suma = sumaDosNumeros(numeroA, numeroB);
                     printf("La suma de  (%.2f + %.2f = %.2f) :\n", numeroA,numeroB,suma);
-
                 break;
+
             case 4:
                     resta = restaDosNumeros(numeroA, numeroB);
                     printf("\nLa resta entre los dos numeros es : %.2f", resta);
                 break;
+
             case 5: divide = dividirDosNumeros(numeroA, numeroB);
-                    printf("\n el resultado de dividir (A = %f / B =%f) es :", numeroA, numeroB, divide);
+                    if(divide == -0){
+                        printf("No se puede realizar la operacion !!");
+                    }else{
+                        printf("\El resultado de la divicion es %.2f : ",divide);
+                    }
                 break;
+
             case 6: multiplica = multiplicaDosNumeros(numeroA, numeroB);
-                    printf("\nEl resultado de multiplicar A = %f, con B = %f es : ", numeroA, numeroB, multiplica);
+                    printf("\nEl resultado de multiplicar A = %f, con B = %f es : %.2f", numeroA, numeroB, multiplica);
                 break;
-            case 7: fac = factorial(numeroA);
-                    printf("El factorial del numero es : %l", fac);
+
+            case 7: fac = factorial((int) numeroA);
+                    if(fac == -1){
+                        printf("No se puede calcular el Factorial de un numero menor a 0");
+                    }else{
+                        printf("El factorial del numero es : %d", fac);
+                    }
+
                 break;
             case 8:
                 break;
