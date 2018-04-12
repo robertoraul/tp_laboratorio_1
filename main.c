@@ -17,7 +17,8 @@ int main()
 
     while(seguir=='s')
     {
-        printf("\n1- Ingresar 1er operando (A=x)\n");
+        printf("\n\n");
+        printf("1- Ingresar 1er operando (A=x)\n");
         printf("2- Ingresar 2do operando (B=y)\n");
         printf("3- Calcular la suma (A+B)\n");
         printf("4- Calcular la resta (A-B)\n");
@@ -31,39 +32,42 @@ int main()
 
         switch(opcion)
         {
-            case 1: printf("\nIngrese primer numero (A) : ");
-                    scanf("%f", &numeroA);
+            case 1: numeroA = pedirNumero("Ingrese primer numero (A) : ");
                 break;
 
-            case 2: printf("\nIngrese segundo numero (B) : ");
-                    scanf("%f", &numeroB);
+            case 2: numeroB = pedirNumero("Ingrese Segundo numero (B) : ");
                 break;
 
-            case 3: suma = sumaDosNumeros(numeroA, numeroB);
+            case 3: system("cls");
+                    suma = sumaDosNumeros(numeroA, numeroB);
                     printf("\nLa suma de  ( A = %.2f + B = %.2f ) es igual a : %.2f", numeroA, numeroB, suma);
                 break;
 
-            case 4: resta = restaDosNumeros(numeroA, numeroB);
+            case 4: system("cls");
+                    resta = restaDosNumeros(numeroA, numeroB);
                     printf("\nLa resta entre los numeros ( A = %.2f - B = %.2f ) es igual a : %.2f",
                             numeroA, numeroB, resta);
                 break;
 
-            case 5: divide = dividirDosNumeros(numeroA, numeroB);
+            case 5: system("cls");
+                    divide = dividirDosNumeros(numeroA, numeroB);
                     if(divide == -0){
                         printf("\nNo se puede realizar la Divicion ( B ) no puede ser 0 !!");
                     }
                     else{
-                        printf("\El resultado de la divicion entre ( A = %.2f / B = %.2f ) es igual a : %.2f",
+                        printf("\nEl resultado de la divicion entre ( A = %.2f / B = %.2f ) es igual a : %.2f",
                                 numeroA, numeroB, divide);
                     }
                 break;
 
-            case 6: multiplica = multiplicaDosNumeros(numeroA, numeroB);
+            case 6: system("cls");
+                    multiplica = multiplicaDosNumeros(numeroA, numeroB);
                     printf("\nEl resultado de multiplicar ( A = %.2f * B = %.2f ) es igual a : %.2f",
                             numeroA, numeroB, multiplica);
                 break;
 
-            case 7: fac = factorial((int) numeroA);
+            case 7: system("cls");
+                    fac = factorial((int) numeroA);
                     if(fac == -1){
                         printf("\nNo se puede calcular el Factorial de un numero menor a 0");
                     }
@@ -72,7 +76,8 @@ int main()
                     }
                 break;
 
-            case 8: suma = sumaDosNumeros(numeroA, numeroB);
+            case 8: system("cls");
+                    suma = sumaDosNumeros(numeroA, numeroB);
                     resta = restaDosNumeros(numeroA, numeroB);
                     divide = dividirDosNumeros(numeroA, numeroB);
                     multiplica = multiplicaDosNumeros(numeroA, numeroB);
@@ -83,6 +88,7 @@ int main()
                     printf("\nLa divicion de %.2f / %.2f = %.2f ",numeroA, numeroB, divide);
                     printf("\nLa multiplicacion de %.2f * %.2f = %.2f", numeroA, numeroB, multiplica);
                     printf("\nEl factorial de %.2f es: %d", numeroA, fac);
+                    printf("\n\n");
                 break;
             case 9:
                 seguir = 'n';
