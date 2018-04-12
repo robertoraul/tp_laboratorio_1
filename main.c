@@ -82,12 +82,24 @@ int main()
                     divide = dividirDosNumeros(numeroA, numeroB);
                     multiplica = multiplicaDosNumeros(numeroA, numeroB);
                     fac = factorial(numeroA);
-                    system("cls");
+
                     printf("\nLa suma de %.2f + %.2f = %.2f ", numeroA,numeroB, suma);
                     printf("\nLa resta de %.2f - %.2f = %.2f ",numeroA, numeroB, resta);
-                    printf("\nLa divicion de %.2f / %.2f = %.2f ",numeroA, numeroB, divide);
+
+                    if(divide != -0){
+                        printf("\nLa divicion de %.2f / %.2f = %.2f ",numeroA, numeroB, divide);
+                    }else{
+                        printf("\nNo se puede realizar la operacion de divicion!!!");
+                    }
+
                     printf("\nLa multiplicacion de %.2f * %.2f = %.2f", numeroA, numeroB, multiplica);
-                    printf("\nEl factorial de %.2f es: %d", numeroA, fac);
+
+                    if(fac != -1){
+                        printf("\nEl factorial de %.2f es: %d", numeroA, fac);
+                    }else{
+                        printf("\nNo se puede calcular el Factorial de un numero menor que cero!!!");
+                    }
+
                     printf("\n\n");
                 break;
             case 9:
