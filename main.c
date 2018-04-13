@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "funciones.h"
 
-int main()
-{
+int main(){
+
     char seguir='s';
-    int opcion=0;
+    int opcion= 0;
     float numeroA;
     float numeroB;
     float suma;
@@ -14,33 +14,24 @@ int main()
     float multiplica;
     int fac;
 
+    while(seguir=='s'){
+        printf("\n");
+        opcion = enviarmenu(numeroA, numeroB);
 
-    while(seguir=='s')
-    {
-        printf("\n\n");
-        printf("1- Ingresar 1er operando (A=x)\n");
-        printf("2- Ingresar 2do operando (B=y)\n");
-        printf("3- Calcular la suma (A+B)\n");
-        printf("4- Calcular la resta (A-B)\n");
-        printf("5- Calcular la division (A/B)\n");
-        printf("6- Calcular la multiplicacion (A*B)\n");
-        printf("7- Calcular el factorial (A!)\n");
-        printf("8- Calcular todas las operacione\n");
-        printf("9- Salir\n");
+        switch(opcion){
 
-        scanf("%d",&opcion);
-
-        switch(opcion)
-        {
-            case 1: numeroA = pedirNumero("Ingrese primer numero (A) : ");
+            case 1: system("cls");
+                    numeroA = pedirNumero("Ingrese primer numero (A) : ");
                 break;
 
-            case 2: numeroB = pedirNumero("Ingrese Segundo numero (B) : ");
+            case 2: system("cls");
+                    numeroB = pedirNumero("Ingrese Segundo numero (B) : ");
                 break;
 
             case 3: system("cls");
                     suma = sumaDosNumeros(numeroA, numeroB);
-                    printf("\nLa suma de  ( A = %.2f + B = %.2f ) es igual a : %.2f", numeroA, numeroB, suma);
+                    printf("\nLa suma de  ( A = %.2f + B = %.2f ) es igual a : %.2f",
+                            numeroA, numeroB, suma);
                 break;
 
             case 4: system("cls");
@@ -52,7 +43,7 @@ int main()
             case 5: system("cls");
                     divide = dividirDosNumeros(numeroA, numeroB);
                     if(divide == -0){
-                        printf("\nNo se puede realizar la Divicion ( B ) no puede ser 0 !!");
+                        printf("\nNo se puede realizar la Divicion, ( B ) no puede ser 0 !!");
                     }
                     else{
                         printf("\nEl resultado de la divicion entre ( A = %.2f / B = %.2f ) es igual a : %.2f",
@@ -68,11 +59,11 @@ int main()
 
             case 7: system("cls");
                     fac = factorial((int) numeroA);
-                    if(fac == -1){
-                        printf("\nNo se puede calcular el Factorial de un numero menor a 0");
+                    if(fac != -1){
+                        printf("\nEl factorial del numero %d es : %d", (int)numeroA, fac);
                     }
                     else{
-                        printf("\nEl factorial del numero %d es : %d", (int)numeroA, fac);
+                        printf("\nNo se puede calcular el Factorial de un numero menor a 0");
                     }
                 break;
 
@@ -99,9 +90,8 @@ int main()
                     }else{
                         printf("\nNo se puede calcular el Factorial de un numero menor que cero!!!");
                     }
-
-                    printf("\n\n");
                 break;
+
             case 9:
                 seguir = 'n';
                 break;

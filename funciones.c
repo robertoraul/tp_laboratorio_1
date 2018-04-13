@@ -99,3 +99,40 @@ float pedirNumero(char mensaje[]){
 
     return retorno;
 }
+
+/** \brief Muestra un mensaje personalizado optenido por parametro
+ *
+ * \param mensaje, char[] obtenido por parametro
+ *
+ */
+
+void enviaMensaje(char mensaje[]){
+    printf("%s", mensaje);
+}
+
+/** \brief Muestra opciones de un menú que serán evaluadas por el usuario
+ *
+ * \param numero1, primer número ingresado para las operaciones
+ * \param numero2, segundo número ingresado para las operaciones
+ * \return retorno, opción elegida por el usuario
+ *
+ */
+
+int enviarmenu(float numero1, float numero2){
+    int retorno;
+
+    printf("\n");
+    printf("1- Ingresar 1er operando ( A = %.2f )\n", numero1);
+    printf("2- Ingresar 2do operando ( B = %.2f )\n", numero2);
+    printf("3- Calcular la suma ( %.2f + %.2f )\n", numero1, numero2);
+    printf("4- Calcular la resta ( %.2f - %.2f )\n", numero1, numero2);
+    printf("5- Calcular la division ( %.2f / %.2f )\n", numero1, numero2);
+    printf("6- Calcular la multiplicacion ( %.2f * %.2f )\n", numero1, numero2);
+    printf("7- Calcular el factorial ( %.2f !)\n", numero1);
+    printf("8- Calcular todas las operacione\n");
+    printf("9- Salir\n");
+
+    scanf("%d", &retorno);
+
+    return retorno;
+}
